@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styleLogin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body style="background-image: url('main.jpg'); background-repeat: no-repeat; background-size: cover;">
+    <div class="formBox">
+        <h1>Login here</h1>
+        <div class="inputBox">
+            <i class="fa-regular fa-user"></i>
+            <input type="text" placeholder="Username" id="userInputID" required>
+        </div>
+        <div class="inputBox">
+            <i class="fa-solid fa-key"></i>
+            <input type="password" placeholder="Password" id="userInputPassword" required>
+            <span class="eye" onclick="hidePassword()">
+                <i id="hide1" class="fa-regular fa-eye"></i>
+                <i id="hide2" class="fa-regular fa-eye-slash"></i>
+            </span>
+        </div>
+        <input type="button" class="loginButton" value="Login" onclick="redirectNext()">
+    </div>
+
+    <script>
+        function hidePassword() {
+            var x = document.getElementById("userInputPassword");
+            var y = document.getElementById("hide1");
+            var z = document.getElementById("hide2");
+
+            if (x.type === 'password') {
+                x.type = "text";
+                y.style.display = "block";
+                z.style.display = "none";
+            } else {
+                x.type = "password"
+                y.style.display = "none";
+                z.style.display = "block";
+            }
+        }
+
+        function redirectNext() {
+            var x = document.getElementById("userInputID").value;
+            var y = document.getElementById("userInputPassword").value;
+            if (x === "admin" && y === "khang@123") {
+                window.location.href = 'index.html';
+            } else {
+                alert('Wrong ID or Password');
+            }
+        }
+    </script>
+
+
+
+</body>
+
+</html>
