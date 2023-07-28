@@ -4,79 +4,85 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Student Management</title>
     <link rel="stylesheet" href="styleIndex.css">
 </head>
 
 <body style="background-image: url('main.jpg'); background-repeat: no-repeat; background-size: cover;">
     <div class="wrapper">
-        <h1>Student management</h1>
-        <form action="">
-            <div class="inputBox">
-                <label for="name">Student Name</label>
-                <input type="text" id="name" placeholder="Insert name" required />
-                <br />
-            </div>
+        <div class="left">
+            <h1>Student management</h1>
+            <form action="">
+                <div class="inputBox">
+                    <label for="name">Student Name</label>
+                    <input type="text" id="name" placeholder="Insert name" required />
+                    <br />
+                </div>
 
-            <div class="dateChoose">
-                <label for="dob">Student DOB</label>
-                <input type="date" id="date" />
-                <br />
-            </div>
+                <div class="dateChoose">
+                    <label for="dob">Student DOB</label>
+                    <input type="date" id="date" />
+                    <br />
+                </div>
 
-            <div class="genderChoose">
-                <label for="gender">Student gender</label>
+                <div class="genderChoose">
+                    <label for="gender">Student gender</label>
+                    <br>
+                    <input type="radio" value="Male" name="gender" class="gender" /><span
+                        class="radio-value">Male</span>
+                    <input type="radio" value="Female" name="gender" class="gender" /><span
+                        class="radio-value">Female</span>
+                    <br />
+                </div>
+
+                <div class="languageChoose">
+                    <label for="">Student language</label>
+                    <br>
+                    <input type="checkbox" value="English" /><span class="radio-value">English</span>
+                    <input type="checkbox" value="Vietnamese" /><span class="radio-value">Vietnamese</span>
+                    <input type="checkbox" value="Japanese" /><span class="radio-value">Japanese</span>
+                    <input type="checkbox" value="Chinese" /><span class="radio-value">Chinese</span>
+                    <input type="checkbox" value="French" /><span class="radio-value">French</span>
+                    <br />
+                </div>
+
+                <div class="classChoose">
+                    <label for="">Student Class</label>
+                    <br>
+                    <select id="class">
+                        <option value="C160BG">C160BG</option>
+                        <option value="C1610L">C1610L</option>
+                        <option value="C1708I">C1708I</option>
+                        <option value="C1608I">C1608I</option>
+                    </select>
+                    <br />
+                </div>
+
+                <button type="submit" id="btn">Add</button>
+            </form>
+        </div>
+
+
+
+        <div class="right">
+            <table id="studentTable" border="1" cellspacing="1" cellpadding="4">
+                <h1>Student list</h1>
                 <br>
-                <input type="radio" value="Male" name="gender" class="gender" /><span class="radio-value">Male</span>
-                <input type="radio" value="Female" name="gender" class="gender" /><span
-                    class="radio-value">Female</span>
-                <br />
-            </div>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>DOB</th>
+                        <th>Gender</th>
+                        <th>Languages</th>
+                        <th>Class</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
 
-            <div class="languageChoose">
-                <label for="">Student language</label>
-                <br>
-                <input type="checkbox" value="English" /><span class="radio-value">English</span>
-                <input type="checkbox" value="Vietnamese" /><span class="radio-value">Vietnamese</span>
-                <input type="checkbox" value="Japanese" /><span class="radio-value">Japanese</span>
-                <input type="checkbox" value="Chinese" /><span class="radio-value">Chinese</span>
-                <input type="checkbox" value="French" /><span class="radio-value">French</span>
-                <br />
-            </div>
-
-            <div class="classChoose">
-                <label for="">Student Class</label>
-                <br>
-                <select id="class">
-                    <option value="C160BG">C160BG</option>
-                    <option value="C1610L">C1610L</option>
-                    <option value="C1708I">C1708I</option>
-                    <option value="C1608I">C1608I</option>
-                </select>
-                <br />
-            </div>
-
-            <button type="submit" id="btn">Add</button>
-        </form>
-
-        <br />
-
-        <table id="studentTable" border="1" cellspacing="1" cellpadding="4">
-            <h1>Student list</h1>
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>DOB</th>
-                    <th>Gender</th>
-                    <th>Languages</th>
-                    <th>Class</th>
-                </tr>
-            </thead>
-            <tbody></tbody>
-        </table>
+        <script src="./index.js"></script>
     </div>
-
-    <script src="./index.js"></script>
 </body>
 
 </html>
