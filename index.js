@@ -5,10 +5,10 @@ var btn = document.getElementById("btn");
 btn.addEventListener("click", (e) => {
     e.preventDefault();
     if (confirm("Bạn có chắc chắn muốn thêm học sinh này?")) {
-        addStudent(e); //  thêm học sinh vào bảng nếu người dùng đồng ý thêm học sinh
+        addStudent(e);
     } else {
         alert("Hủy thêm học sinh");
-        e.stopImmediatePropagation(); //  dừng sự kiện click nút btn nếu người dùng hủy thêm học sinh không thêm học sinh vào bảng
+        e.stopImmediatePropagation();
     }
 });
 
