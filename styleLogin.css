@@ -7,6 +7,9 @@
 
 body {
     font-family: 'REM', sans-serif;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 .formBox {
@@ -70,4 +73,12 @@ h1 {
     background: transparent;
     color: #fff;
     font-size: 18px;
+}
+
+.eye:hover {
+    cursor: pointer;
+}
+
+.loginButton:hover {
+    background-color: purple;
 }
